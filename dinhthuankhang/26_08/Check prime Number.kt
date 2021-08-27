@@ -1,28 +1,31 @@
 fun main(){
     var number: Int?
-    var i = 2
-    var checkPrime: Boolean? = true
     do {
         print("Write positive integer: ")
         number = readLine()!!.toIntOrNull()
     }
     while(number == null || number <= 0)
+    print(checkPrime(number))
+}
+
+fun checkPrime(number:Int): String {
+    var i = 2
+    var check : Boolean = true
+    val sqrtNumber = Math.sqrt(number.toDouble()).toInt()
     when(number){
-        1 -> checkPrime = false
-        2,3 -> checkPrime = true
+        1 -> check = false
+        2,3 -> check = true
         else -> {
-            val sqrtNumber = Math.sqrt(number.toDouble()).toInt()
             do{
                 if (number % i == 0){
-                    checkPrime = false
+                    check = false
                 }
                 i++
             }
             while( i <= sqrtNumber || number %i == 0)
         }
     }
-    when (checkPrime) {
-        false -> print("$number is not a prime number")
-        true ->  print ("$number is a prime number")
-    }
+    return if (!check) {
+        "$number is not prime number"
+    } else "$number is prime number"
 }

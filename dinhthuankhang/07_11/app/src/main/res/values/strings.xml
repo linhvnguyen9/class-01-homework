@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">UI</string>
+    <string name="sign_up_underline">
+        <u>Sign up</u>
+    </string>
+    <string name="forgot_pass">
+        <u>Forgot Password</u>
+    </string>
+    <string name="sign_in_underline">
+        <u>Sign in</u>
+    </string>
+    <string name="sign_up">Sign up</string>
+    <string name="sign_in">Sign in</string>
+    <string name="login_text">Welcome back</string>
+    <string name="register_text">Create account</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="pass">Password</string>
+
+</resources>
